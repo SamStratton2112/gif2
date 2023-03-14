@@ -22,11 +22,12 @@ async function getGif(searchWord) {
 function createDiv(indx){
     const newGif= document.createElement('div');
     const img = document.createElement('img');
-    let url = indx.url;
-    img.setAttribute('src', url)
+    let url = indx.images.original.url;
+    img.setAttribute('src', url);
     newGif.appendChild(img);
-    $('newGif').addClass('gif')
-    $('#section').append(newGif)
+    newGif.setAttribute('class', 'gif');
+    $('#section').append(newGif);
+
 }
 
 $('#clearBtn').on('click', function (){
